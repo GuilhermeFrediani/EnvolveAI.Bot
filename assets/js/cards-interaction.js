@@ -93,8 +93,6 @@ class CardsInteractionManager {
             card.addEventListener('click', (e) => this.handleCardClick(e, card));
         });
         
-        console.log('✅ Cards Interaction Manager initialized');
-        
         // Seleciona automaticamente o primeiro card após toda a seção aparecer
         setTimeout(() => {
             const firstCard = document.querySelector('.capability-card[data-card-id="1"]');
@@ -143,6 +141,7 @@ class CardsInteractionManager {
             // Se já está visível, faz fade out primeiro
             if (panel.classList.contains('active')) {
                 panel.classList.remove('active');
+                panel.setAttribute('aria-hidden', 'true');
                 
                 // Aguarda fade out completar (400ms) antes de trocar conteúdo
                 setTimeout(() => {
@@ -154,6 +153,7 @@ class CardsInteractionManager {
                     // Fade in do novo conteúdo
                     requestAnimationFrame(() => {
                         panel.classList.add('active');
+                        panel.setAttribute('aria-hidden', 'false');
                     });
                 }, 400);
             } else {
@@ -168,6 +168,7 @@ class CardsInteractionManager {
                 requestAnimationFrame(() => {
                     requestAnimationFrame(() => {
                         panel.classList.add('active');
+                        panel.setAttribute('aria-hidden', 'false');
                     });
                 });
             }
@@ -179,6 +180,7 @@ class CardsInteractionManager {
         
         if (panel) {
             panel.classList.remove('active');
+            panel.setAttribute('aria-hidden', 'true');
             setTimeout(() => {
                 panel.style.display = 'none';
             }, 400);
