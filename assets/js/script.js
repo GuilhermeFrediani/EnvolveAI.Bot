@@ -49,6 +49,7 @@ class ThreeScene {
         this.animationId = null;
         this.time = 0;
         this.lastTime = 0; // 🔧 For delta time
+        this.prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         
         // Progress
         this.progress = 0;
@@ -526,6 +527,10 @@ class ThreeScene {
     }
     
     animate() {
+        if (this.prefersReducedMotion) {
+            this.renderOnce();
+            return;
+        }
         this.animationId = requestAnimationFrame(() => this.animate());
         
         const currentTime = Date.now() * 0.001;
@@ -582,6 +587,21 @@ class ThreeScene {
         // 🔧 Manual reset for performance monitoring
         if (this.renderer && this.frameCount % 60 === 0) {
             this.renderer.info.reset();
+        }
+    }
+
+    renderOnce() {
+        if (this.camera) {
+            this.camera.position.x = this.targetCameraX;
+            this.camera.position.y = this.targetCameraY;
+            this.camera.position.z = this.targetCameraZ;
+            this.camera.lookAt(0, 10, -100);
+        }
+        
+        if (this.composer) {
+            this.composer.render();
+        } else if (this.renderer) {
+            this.renderer.render(this.scene, this.camera);
         }
     }
     
@@ -2687,9 +2707,10 @@ class EnvolveAIExperience {
         return new Promise((resolve) => {
             // Simular carregamento de recursos locais
             const resources = [
-                'styles.css',
-                'script.js',
-                // Adicionar outras imagens/recursos se existirem
+                'assets/css/styles.css',
+                'assets/js/script.js',
+                'assets/js/cards-interaction.js',
+                'assets/js/fix-overlay.js'
             ];
             
             let loadedCount = 0;
