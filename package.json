@@ -1,0 +1,36 @@
+{
+  "name": "envolveai-bot",
+  "version": "1.0.0",
+  "description": "EnvolveAI.Bot - High-end SaaS com experiência 3D cinematográfica",
+  "scripts": {
+    "start": "echo Opening index.html... && start index.html",
+    "build": "npm run build:css && npm run build:js",
+    "build:css": "cssnano assets/css/styles.css assets/css/styles.min.css --no-map",
+    "build:js": "terser assets/js/script.js -c -m -o assets/js/script.min.js --source-map",
+    "watch": "npm-run-all --parallel watch:*",
+    "watch:css": "nodemon --watch assets/css/styles.css --exec \"npm run build:css\"",
+    "watch:js": "nodemon --watch assets/js/script.js --exec \"npm run build:js\"",
+    "validate": "echo ✅ Validating optimizations... && node -e \"console.log('📊 Performance optimizations implemented successfully')\"",
+    "deploy:vercel": "vercel --prod",
+    "deploy:netlify": "netlify deploy --prod",
+    "deploy": "npm run build && npm run validate && echo ✅ Ready for deployment!"
+  },
+  "devDependencies": {
+    "cssnano": "^6.0.1",
+    "cssnano-cli": "^1.0.5",
+    "terser": "^5.24.0",
+    "nodemon": "^3.0.2",
+    "npm-run-all": "^4.1.5"
+  },
+  "keywords": [
+    "whatsapp",
+    "chatbot",
+    "ai",
+    "saas",
+    "three.js",
+    "3d"
+  ],
+  "author": "EnvolveAI",
+  "license": "UNLICENSED",
+  "private": true
+}

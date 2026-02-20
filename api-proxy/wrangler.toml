@@ -1,0 +1,22 @@
+# Configuração Cloudflare Workers
+# Deploy: npx wrangler deploy
+
+name = "envolveai-gemini-proxy"
+main = "cloudflare-worker.js"
+compatibility_date = "2024-01-01"
+
+# Variáveis de ambiente (configurar no dashboard)
+[vars]
+ENVIRONMENT = "production"
+
+# Configurar no dashboard: Settings > Variables > Environment Variables
+# GEMINI_API_KEY = "sua-chave-aqui" (NUNCA commitar)
+
+# Rate limiting e recursos
+[limits]
+cpu_ms = 50
+
+# Rotas (opcional se usar custom domain)
+# [[routes]]
+# pattern = "api.envolveai.bot/gemini"
+# zone_name = "envolveai.bot"

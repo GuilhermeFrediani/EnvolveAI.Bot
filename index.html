@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnvolveAI.Bot - Automação WhatsApp com IA</title>
+    <meta name="description" content="Transforme seu atendimento no WhatsApp com IA. Bot inteligente, agendamentos automáticos, pagamentos PIX e muito mais.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://envolveai.bot">
+    <meta property="og:title" content="EnvolveAI.Bot - Automação WhatsApp com IA">
+    <meta property="og:description" content="Automatize vendas, agendamentos e atendimento 24/7 no WhatsApp. Sistema completo que evolui com seu negócio.">
+    <meta property="og:image" content="https://envolveai.bot/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://envolveai.bot">
+    <meta property="twitter:title" content="EnvolveAI.Bot - Automação WhatsApp com IA">
+    <meta property="twitter:description" content="Automatize vendas, agendamentos e atendimento 24/7 no WhatsApp. Sistema completo que evolui com seu negócio.">
+    <meta property="twitter:image" content="https://envolveai.bot/og-image.jpg">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://envolveai.bot">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🤖%3C/text%3E%3C/svg%3E">
+    
+    <!-- 🚀 RESOURCE HINTS - Performance Optimization -->
+    <!-- DNS Prefetch: Resolve DNS antecipadamente -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://generativelanguage.googleapis.com">
+    
+    <!-- Preconnect: Estabelece conexão TCP/TLS antecipadamente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    
+    <!-- Preload: Carrega recursos críticos com alta prioridade -->
+    <link rel="preload" href="assets/css/styles.css?v=20251022B" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" as="style">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Bibliotecas serão carregadas dinamicamente durante o loading -->
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css?v=20251022B">
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "EnvolveAI.Bot",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "description": "Automatize vendas, agendamentos e atendimento 24/7 no WhatsApp com IA especializada",
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Plano Automatizador IA",
+                "price": "147",
+                "priceCurrency": "BRL",
+                "priceValidUntil": "2025-12-31"
+            },
+            {
+                "@type": "Offer",
+                "name": "Plano Vendedor IA",
+                "price": "497",
+                "priceCurrency": "BRL",
+                "priceValidUntil": "2025-12-31"
+            }
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "ratingCount": "50"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading">
+        <div class="loading-logo">
+            <div class="logo-animation">🤖</div>
+            <h2>EnvolveAI.Bot</h2>
+        </div>
+        <div class="loading-bar">
+            <div class="loading-progress" id="loadingProgress"></div>
+        </div>
+        <p class="loading-text" id="loadingText">Preparando experiência imersiva...</p>
+        <div class="loading-status" id="loadingStatus">
+            <div class="status-item" id="statusThree">
+                <i class="fas fa-cube"></i>
+                <span>Carregando Three.js...</span>
+            </div>
+            <div class="status-item" id="statusGSAP">
+                <i class="fas fa-magic"></i>
+                <span>Carregando GSAP...</span>
+            </div>
+            <div class="status-item" id="statusScrollTrigger">
+                <i class="fas fa-scroll"></i>
+                <span>Carregando ScrollTrigger...</span>
+            </div>
+            <div class="status-item" id="statusFontAwesome">
+                <i class="fas fa-icons"></i>
+                <span>Carregando Font Awesome...</span>
+            </div>
+            <div class="status-item" id="statusLocal">
+                <i class="fas fa-file-alt"></i>
+                <span>Carregando recursos locais...</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Navigation Menu -->
+    <nav class="main-nav" id="mainNav" role="navigation" aria-label="Navegação principal do site">
+        <div class="nav-logo">
+            <span class="logo-icon" aria-hidden="true">🤖</span>
+            <span class="logo-text">EnvolveAI.Bot</span>
+        </div>
+        <ul class="nav-menu" id="navMenu" role="menubar">
+            <li role="none"><a href="#hero" data-section="0" role="menuitem" aria-label="Ir para seção Início">Início</a></li>
+            <li role="none"><a href="#about" data-section="1" role="menuitem" aria-label="Ir para seção Origem">Origem</a></li>
+            <li role="none"><a href="#features" data-section="2" role="menuitem" aria-label="Ir para seção Capacidades">Capacidades</a></li>
+            <li role="none"><a href="#demo" data-section="3" role="menuitem" aria-label="Ir para seção Simulação">Simulação</a></li>
+            <li role="none"><a href="#pricing" data-section="4" role="menuitem" aria-label="Ir para seção Sua Missão">Sua Missão</a></li>
+            <li role="none"><a href="#faq" data-section="5" role="menuitem" aria-label="Ir para seção Pontos de Clareza">Pontos de Clareza</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="navMenu">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </button>
+    </nav>
+    
+    <!-- Navigation Buttons - Independent of Top Nav -->
+    <div class="top-nav-buttons" role="navigation" aria-label="Navegação entre páginas">
+        <button class="cta" id="topPrevBtn" aria-label="Voltar para página anterior">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                ></path>
+            </svg>
+            <p aria-hidden="true">Voltar</p>
+        </button>
+        <button class="cta" id="topNextBtn" aria-label="Ir para próxima página">
+            <p aria-hidden="true">Próxima Página</p>
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                ></path>
+            </svg>
+        </button>
+    </div>
+    
+    <!-- 3D Canvas Background -->
+    <div id="canvas-container"></div>
+    
+    <!-- Progress Indicator removido completamente -->
+    
+    <!-- Main Container -->
+    <div class="content-container" id="container">
+        
+        
+        
+        <!-- Section 1: Hero (Nova posição) -->
+        <section class="section hero-section active" id="hero" data-section="0" role="region" aria-labelledby="hero-title">
+            <div class="section-content">
+                <div class="hero-content">
+                    <h1 class="hero-title" id="hero-title">
+                        <span class="title-main">EnvolveAI</span><span class="title-highlight">.Bot</span>
+                    </h1>
+                    <h2 class="hero-subtitle">
+                        Transforme seu WhatsApp em um Centro de Vendas Inteligente.
+                    </h2>
+                    <p class="hero-description">
+                        Automatize vendas, agendamentos e atendimento 24/7. Não é apenas um bot — é um sistema completo que evolui com seu negócio.
+                    </p>
+                    
+                    <div class="hero-cta">
+                        <button class="btn-primary" id="startDemo" aria-label="Experimentar gratuitamente o EnvolveAI.Bot">
+                            Experimente Grátis
+                            <span class="btn-arrow" aria-hidden="true">→</span>
+                        </button>
+                        <button class="btn-secondary" id="watchVideo" aria-label="Assistir vídeo demonstrativo">
+                            Como Funciona?
+                        </button>
+                    </div>
+                    
+                    <!-- Cards 3D Interativos -->
+                    <div class="cards-3d-container">
+                        <!-- Card 1: IA Inteligente -->
+                        <div class="card-3d" id="card-ia-inteligente">
+                            <div class="card-content">
+                                <div class="card-back">
+                                    <div class="card-back-content">
+                                        <p>Converse com seus clientes de forma natural, 24 horas por dia.</p>
+                                    </div>
+                                </div>
+                                <div class="card-front">
+                                    <div class="card-front-content">
+                                        <div class="card-icon">🧠</div>
+                                        <h3 class="card-title">IA Inteligente</h3>
+                                        <p class="card-microcopy">Entende contexto e intenção</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Vendas Ampliadas -->
+                        <div class="card-3d" id="card-vendas-ampliadas">
+                            <div class="card-content">
+                                <div class="card-back">
+                                    <div class="card-back-content">
+                                        <p>Transforme visitantes em clientes com um funil de vendas automático.</p>
+                                    </div>
+                                </div>
+                                <div class="card-front">
+                                    <div class="card-front-content">
+                                        <div class="card-icon">📈</div>
+                                        <h3 class="card-title">Vendas Ampliadas</h3>
+                                        <p class="card-microcopy">Funil automático de vendas</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Agenda Organizada -->
+                        <div class="card-3d" id="card-agenda-organizada">
+                            <div class="card-content">
+                                <div class="card-back">
+                                    <div class="card-back-content">
+                                        <p>Automatize agendamentos e envie lembretes para reduzir faltas.</p>
+                                    </div>
+                                </div>
+                                <div class="card-front">
+                                    <div class="card-front-content">
+                                        <div class="card-icon">🗓️</div>
+                                        <h3 class="card-title">Agenda Organizada</h3>
+                                        <p class="card-microcopy">Lembretes automáticos</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4: Setup em 24h -->
+                        <div class="card-3d" id="card-setup-24h">
+                            <div class="card-content">
+                                <div class="card-back">
+                                    <div class="card-back-content">
+                                        <p>Comece a vender e atender no piloto automático em menos de um dia.</p>
+                                    </div>
+                                </div>
+                                <div class="card-front">
+                                    <div class="card-front-content">
+                                        <div class="card-icon">⚡️</div>
+                                        <h3 class="card-title">Setup em 24h</h3>
+                                        <p class="card-microcopy">Ativo em menos de um dia</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 5: Pagamentos no Chat (ao lado do Setup) -->
+                        <div class="card-3d">
+                            <div class="card-content">
+                                <div class="card-back">
+                                    <div class="card-back-content">
+                                        <p>Receba pagamentos via PIX diretamente na conversa, sem intermediários.</p>
+                                    </div>
+                                </div>
+                                <div class="card-front">
+                                    <div class="card-front-content">
+                                        <div class="card-icon">💸</div>
+                                        <h3 class="card-title">Pagamentos no Chat</h3>
+                                        <p class="card-microcopy">PIX direto na conversa</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section 2: About (Origem) -->
+        <section class="section about-section" id="about" data-section="1" role="region" aria-labelledby="about-title">
+            <div class="section-content">
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h2 class="section-title">Por que criamos o Envolve<span class="highlight-product">AI.Bot</span></h2>
+                        <div class="section-description">
+                            <p class="main-statement">Vimos empresas perdendo vendas e clientes frustrados com bots que não entendiam suas necessidades. O atendimento digital havia se tornado impessoal e ineficiente.</p>
+                            <p class="complementary-text">Nossa origem não foi criar mais um chatbot, mas sim reimaginar o que uma conversa poderia ser. Acreditamos que a tecnologia deve servir às pessoas — e não o contrário.</p>
+                        </div>
+                        <div class="about-features">
+                            <div class="feature-item">
+                                <i class="fas fa-brain"></i>
+                                <div>
+                                    <h3 class="feature-title-green">Inteligência como DNA</h3>
+                                    <p>IA que realmente entende o contexto, criando conversas indistinguíveis da humana</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-bullseye"></i>
+                                <div>
+                                    <h3 class="feature-title-green">Design Centrado no Resultado</h3>
+                                    <p>Cada funcionalidade foi criada com um objetivo: aumentar receita e economizar tempo</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-handshake"></i>
+                                <div>
+                                    <h3 class="feature-title-green">Parceria, não Ferramenta</h3>
+                                    <p>Somos seu parceiro estratégico, com suporte dedicado e plataforma que evolui com seu negócio</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-visual">
+                        <!-- Cards de métricas sem card container -->
+                        <div class="metrics-container">
+                            <!-- Card Métrica 1 -->
+                            <div class="metric" tabindex="0">
+                                <div class="metric-front">
+                                    <span class="metric-icon">🚀</span>
+                                    <span class="metric-value" data-target="2.5" data-suffix="x">2.5x</span>
+                                    <span class="metric-label">Mais Leads Qualificados</span>
+                                </div>
+                                <div class="metric-back">
+                                    <p>Converta até 2,5x mais<br>leads qualificados com IA<br>que entende contexto real.</p>
+                                </div>
+                            </div>
+                            <!-- Card Métrica 2 -->
+                            <div class="metric" tabindex="0">
+                                <div class="metric-front">
+                                    <span class="metric-icon">⚡</span>
+                                    <span class="metric-value" data-target="85" data-suffix="%">85%</span>
+                                    <span class="metric-label">Redução no Tempo de Resposta</span>
+                                </div>
+                                <div class="metric-back">
+                                    <p>Reduza o tempo de resposta<br>em até 85% com automação<br>instantânea e inteligente.</p>
+                                </div>
+                            </div>
+                            <!-- Card Métrica 3 -->
+                            <div class="metric" tabindex="0">
+                                <div class="metric-front">
+                                    <span class="metric-icon">⏱️</span>
+                                    <span class="metric-value" data-target="24" data-suffix="/7">24/7</span>
+                                    <span class="metric-label">Disponibilidade Total</span>
+                                </div>
+                                <div class="metric-back">
+                                    <p>Garanta atendimento automático<br>24/7 — sem perder clientes<br>por falta de resposta.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Chamado de Valor / Transição -->
+                <div class="section-transition">
+                    <p class="transition-text">🌐 Do propósito à prática: veja como transformamos essa visão em capacidades reais de IA.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section 3: Features -->
+        <section class="section features-section" id="features" data-section="2" role="region" aria-labelledby="features-title">
+            <div class="section-content">
+                <div class="features-header">
+                </div>
+                <div class="title-container">
+                    <h2 class="section-title">Capacidades que transformam atendimento em resultado</h2>
+                </div>
+                <div class="subtitle-container">
+                    <p class="section-description">
+                        Cada módulo do EnvolveAI.Bot foi criado para unir tecnologia e propósito — da conversa ao fechamento da venda, tudo em um só fluxo inteligente.
+                    </p>
+                </div>
+                
+                <!-- Painel de Detalhes do Card Selecionado -->
+                <div class="card-details-panel" id="cardDetailsPanel" style="display: none;">
+                    <div class="card-details-content" id="cardDetailsContent">
+                        <!-- Conteúdo será inserido via JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- Grid de Capacidades -->
+                <div class="capabilities-grid">
+                    <!-- Card 1 -->
+                    <div class="capability-card" data-card-id="1">
+                        <div class="capability-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="capability-content">
+                            <h3 class="capability-title">Implementação Inteligente</h3>
+                            <p class="capability-description">Ative em minutos, sem programar.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="capability-card" data-card-id="2">
+                        <div class="capability-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="capability-content">
+                            <h3 class="capability-title">IA conversacional (Personalizável)</h3>
+                            <p class="capability-description">Conversas naturais que entendem contexto e emoção.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="capability-card" data-card-id="3">
+                        <div class="capability-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="capability-content">
+                            <h3 class="capability-title">Memória e Aprendizagem Contínua</h3>
+                            <p class="capability-description">Aprende com cada interação e se adapta.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="capability-card" data-card-id="4">
+                        <div class="capability-icon">
+                            <i class="fas fa-filter"></i>
+                        </div>
+                        <div class="capability-content">
+                            <h3 class="capability-title">Funis de vendas inteligentes</h3>
+                            <p class="capability-description">Converte conversas em vendas automaticamente.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="capability-card" data-card-id="5">
+                        <div class="capability-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <div class="capability-content">
+                            <h3 class="capability-title">Pagamentos Integrados e Checkout Automático</h3>
+                            <p class="capability-description">Receba PIX direto no chat em tempo real.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="capability-card" data-card-id="6">
+                        <div class="capability-icon">
+                            <i class="fas fa-plug"></i>
+                        </div>
+                        <div class="capability-content">
+                            <h3 class="capability-title">Integrações e Ecossistema</h3>
+                            <p class="capability-description">Conecta com suas ferramentas atuais.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section 4: Simulação em Tempo Real -->
+        <section class="section demo-section" id="demo" data-section="3" role="region" aria-labelledby="demo-title">
+            <div class="section-content">
+                <div class="demo-container">
+                    <div class="demo-left">
+                        <!-- 📌 BLOCO DE CONTEÚDO UNIFICADO -->
+                        <div class="content-block-unified">
+                            <!-- Título Principal -->
+                            <h2 class="section-title">Simulação em Tempo Real</h2>
+                            
+                            <!-- Subtítulo 1 -->
+                            <div class="section-description">
+                                Chega de teoria: Veja o EnvolveAI.Bot atendendo clientes,<br>
+                                agendando serviços e vendendo — Tudo no WhatsApp.
+                            </div>
+                            
+                            <!-- Subtítulos 2 e 3: Fases -->
+                            <div class="demo-phases">
+                                <!-- Subtítulo 2: Simulação Real -->
+                                <div class="phase-item">
+                                    <span class="phase-icon">🟢</span>
+                                    <div class="phase-content">
+                                        <span class="phase-title">Simulação Real</span>
+                                        <span class="phase-desc">Converse como cliente real e veja respostas naturais.</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Subtítulo 3: Consultoria Interativa -->
+                                <div class="phase-item">
+                                    <span class="phase-icon">💡</span>
+                                    <div class="phase-content">
+                                        <span class="phase-title">Consultoria Interativa</span>
+                                        <span class="phase-desc">Descubra como aplicar no seu negócio.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Texto Introdutório -->
+                            <div class="simulation-instruction">
+                                Escolha uma simulação abaixo e clique em <span class="highlight-green">Iniciar simulação</span> para começar.
+                            </div>
+                        </div>
+                        
+                        <!-- Container horizontal: Botões + Card -->
+                        <div class="scenario-and-instructions">
+                            <!-- Controles de Cenário (esquerda) -->
+                            <div class="demo-controls scenario-controls" id="scenarioControls">
+                                <button class="scenario-btn" data-scenario="restaurant">Restaurante</button>
+                                <button class="scenario-btn" data-scenario="clinic">Clínica</button>
+                                <button class="scenario-btn" data-scenario="store">Loja</button>
+                            </div>
+                            
+                            <!-- Card Informativo (direita) -->
+                            <div class="instruction-card">
+                                <div class="instruction-header">
+                                    <i class="fas fa-info-circle"></i>
+                                    <h4>Como Funciona</h4>
+                                </div>
+                                <div class="instruction-steps">
+                                    <div class="step">
+                                        <span class="step-number">1</span>
+                                        <span class="step-text">Escolha uma simulação</span>
+                                    </div>
+                                    <div class="step">
+                                        <span class="step-number">2</span>
+                                        <span class="step-text">Clique em "Iniciar"</span>
+                                    </div>
+                                    <div class="step">
+                                        <span class="step-number">3</span>
+                                        <span class="step-text">Após o "Oi", converse de verdade!</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="demo-controls action-controls" id="actionControls">
+                            <button class="btn-primary" id="startDemoBtn">Iniciar Simulação</button>
+                            <button class="btn-finalize" id="finalizePhaseBtn">Finalizar a simulação</button>
+                        </div>
+                        
+                        
+                        <!-- Textos Informativos Removidos -->
+                    </div>
+                    
+                    <div class="demo-right">
+                        <!-- iPhone Mockup com WhatsApp -->
+                        <div class="visualization-container">
+                            <div class="phone-mockup" id="phoneMockup">
+                                <div class="btn1"></div>
+                                <div class="btn2"></div>
+                                <div class="btn3"></div>
+                                <div class="btn4"></div>
+                                <div class="phone-screen">
+                                    <div class="whatsapp-demo">
+                                        <div class="whatsapp-header">
+                                            <i class="fab fa-whatsapp"></i>
+                                            <h3 id="botName">Pizzaria do João - Bot</h3>
+                                        </div>
+                                        <div class="chat-container" id="chatContainer">
+                                            <div class="date-separator">Hoje</div>
+                                        </div>
+                                        <!-- 📱 Botão Finalizar DENTRO do Mockup -->
+                                        <button id="finalizeDemoBtn" class="finalize-demo-btn-inside" style="display: none;">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Finalizar Simulação</span>
+                                        </button>
+                                        <div class="whatsapp-footer">
+                                            <input type="text" class="message-input" id="messageInput" placeholder="Digite uma mensagem">
+                                            <button class="send-btn">
+                                                <i class="fas fa-paper-plane"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="phone-top">
+                                    <div class="camera">
+                                        <div class="int"></div>
+                                    </div>
+                                    <div class="speaker"></div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                        <!-- Pop-ups de Capacidade em Ação -->
+                        <div class="capability-popup" id="capabilityPopup">
+                            <div class="popup-content">
+                                <div class="popup-icon">⚡</div>
+                                <div class="popup-text">
+                                    <span class="popup-label">Capacidade em Ação:</span>
+                                    <span class="popup-capability" id="popupCapability">IA Conversacional</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section 5: Pricing -->
+        <section class="section pricing-section" id="pricing" data-section="4" role="region" aria-labelledby="pricing-title">
+            <div class="section-content">
+                
+                <!-- 🎬 FASE 1: Visão Geral dos Planos -->
+                <div class="pricing-phase-1" id="pricingPhase1">
+                    <div class="pricing-header">
+                        <h2 class="section-title" id="pricing-title">Sua Missão Começa Agora</h2>
+                        <p class="section-description">
+                            Todo grande avanço começa com uma decisão. Escolha o plano que irá impulsionar seu negócio para o próximo nível.
+                        </p>
+                    </div>
+                    
+                    <!-- Layout: Cards + Celular -->
+                    <div class="pricing-content-layout">
+                        <!-- Cards de Preços -->
+                        <div class="pricing-cards-grid">
+                            <!-- Plano 1 - Automatizador IA -->
+                            <div class="pricing-button-container">
+                                <div class="btn-minimal-pricing" data-plan="1">
+                                    <h3 class="pricing-btn-title">Plano – Automatizador IA</h3>
+                                    <p class="pricing-btn-price">R$147/mês</p>
+                                    <p class="pricing-btn-fee">Setup: R$90 (única vez)</p>
+                                </div>
+                                <p class="pricing-btn-description">Atendimento ágil e automatizado no WhatsApp, sem complicação.</p>
+                            </div>
+
+                            <!-- Plano 2 - Vendedor IA (Mais Popular) -->
+                            <div class="pricing-button-container popular">
+                                <div class="btn-minimal-pricing plan-2" data-plan="2">
+                                    <span class="badge-mais-popular">MAIS POPULAR</span>
+                                    <h3 class="pricing-btn-title">🚀 Plano 2 – Vendedor IA</h3>
+                                    <p class="pricing-btn-price">R$497/mês</p>
+                                    <p class="pricing-btn-fee">Setup: R$170 (única vez)</p>
+                                </div>
+                                <p class="pricing-btn-description">Converta conversas em vendas com inteligência e agilidade.</p>
+                            </div>
+
+                            <!-- Plano 3 - Enterprise -->
+                            <div class="pricing-button-container">
+                                <div class="btn-minimal-pricing plan-3" data-plan="3">
+                                    <h3 class="pricing-btn-title">🏆 Plano 3 – Enterprise</h3>
+                                    <p class="pricing-btn-subtitle">Solução Completa</p>
+                                    <p class="pricing-btn-price">Sob consulta</p>
+                                    <p class="pricing-btn-fee">Implementação personalizada inclusa</p>
+                                </div>
+                                <p class="pricing-btn-description">Crescimento ilimitado com tecnologia sob medida para o seu negócio.</p>
+                            </div>
+                            
+                            <!-- Botão Comparar Planos - ABAIXO DO PLANO 3 -->
+                            <button class="btn-compare-plans" id="btnComparePlans" aria-label="Ver comparativo detalhado dos planos">
+                                <span class="icon">⚖️</span>
+                                <span class="text">Comparar Planos</span>
+                                <span class="arrow">↓</span>
+                            </button>
+                        </div>
+                        
+                        <!-- iPhone Mockup -->
+                        <div class="pricing-phone-container">
+                            <div class="visualization-container">
+                                <div class="phone-mockup" id="pricingPhoneMockup">
+                                    <div class="btn1"></div>
+                                    <div class="btn2"></div>
+                                    <div class="btn3"></div>
+                                    <div class="btn4"></div>
+                                    <div class="phone-screen">
+                                        <div class="whatsapp-demo">
+                                            <div class="whatsapp-header">
+                                                <i class="fab fa-whatsapp"></i>
+                                                <h3 id="pricingBotName">EnvolveAI.Bot</h3>
+                                            </div>
+                                            <div class="chat-container" id="pricingChatContainer">
+                                                <div class="date-separator">Hoje</div>
+                                            </div>
+                                            <div class="whatsapp-footer">
+                                                <input type="text" class="message-input" id="pricingMessageInput" placeholder="✨ Selecione um plano para ver demonstração" disabled>
+                                                <button class="send-btn">
+                                                    <i class="fas fa-paper-plane"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Tela de Bloqueio -->
+                                        <div class="phone-lock-screen" id="phoneLockScreen">
+                                            <div class="lock-screen-content">
+                                                <div class="fingerprint-container" id="fingerprintIcon">
+                                                    <svg viewBox="0 0 200 220" role="img" aria-label="Autenticação biométrica" xmlns="http://www.w3.org/2000/svg">
+                                                        <title>Impressão digital - Desbloqueio</title>
+                                                        <path class="fingerprint-line outer-1" 
+                                                              d="M 45 50 Q 25 75, 25 110 Q 25 145, 45 170 M 155 50 Q 175 75, 175 110 Q 175 145, 155 170" />
+                                                        <path class="fingerprint-line outer-2" 
+                                                              d="M 75 35 Q 100 25, 125 35" />
+                                                        <path class="fingerprint-line outer-2" 
+                                                              d="M 75 185 Q 100 195, 125 185" />
+                                                        <path class="fingerprint-line middle-1" 
+                                                              d="M 58 65 Q 42 85, 42 110 Q 42 135, 58 155 M 142 65 Q 158 85, 158 110 Q 158 135, 142 155" />
+                                                        <path class="fingerprint-line middle-2" 
+                                                              d="M 82 52 Q 100 44, 118 52" />
+                                                        <path class="fingerprint-line middle-2" 
+                                                              d="M 82 168 Q 100 176, 118 168" />
+                                                        <path class="fingerprint-line inner-1" 
+                                                              d="M 70 80 Q 58 95, 58 110 Q 58 125, 70 140 M 130 80 Q 142 95, 142 110 Q 142 125, 130 140" />
+                                                        <path class="fingerprint-line inner-2" 
+                                                              d="M 88 70 Q 100 64, 112 70" />
+                                                        <path class="fingerprint-line inner-2" 
+                                                              d="M 88 150 Q 100 156, 112 150" />
+                                                        <path class="fingerprint-line center" 
+                                                              d="M 85 95 Q 75 105, 75 110 Q 75 120, 85 130 M 115 95 Q 125 105, 125 110 Q 125 120, 115 130" />
+                                                    </svg>
+                                                    <div class="fingerprint-scanner"></div>
+                                                </div>
+                                                <p class="lock-message">👆 Clique em um plano acima para desbloquear e ver demonstração exclusiva</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="phone-top">
+                                        <div class="camera">
+                                            <div class="int"></div>
+                                        </div>
+                                        <div class="speaker"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 🎬 FASE 2: Comparativo Detalhado (Oculto) -->
+                <div class="pricing-phase-2" id="pricingPhase2">
+                    <!-- Breadcrumb -->
+                    <div class="phase-indicator">
+                        <button class="btn-back-phase" id="btnBackPhase" aria-label="Voltar para fase 1">
+                            <span class="arrow">↑</span> Voltar
+                        </button>
+                        <div class="breadcrumb">
+                            <span class="phase">Visão Geral</span>
+                            <span class="divider">→</span>
+                            <span class="phase active">Comparativo</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Cards Quadrados (3 em linha) -->
+                    <div class="pricing-comparison-cards">
+                        <div class="plan-card-square">
+                            <h4>🤖 Automatizador IA</h4>
+                            <div class="price">R$147/mês</div>
+                            <ul class="features">
+                                <li>5.000 mensagens/mês</li>
+                                <li>IA Conversacional</li>
+                                <li>Agendamentos</li>
+                                <li>Suporte Chat</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="plan-card-square popular">
+                            <span class="badge-mais-popular">MAIS POPULAR</span>
+                            <h4>🚀 Vendedor IA</h4>
+                            <div class="price">R$497/mês</div>
+                            <ul class="features">
+                                <li>20.000 mensagens/mês</li>
+                                <li>Funil de Vendas</li>
+                                <li>Dashboard Analytics</li>
+                                <li>Suporte Prioritário</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="plan-card-square">
+                            <h4>🏆 Enterprise</h4>
+                            <div class="price">Consultar</div>
+                            <ul class="features">
+                                <li>Mensagens Ilimitadas</li>
+                                <li>Multi-Canal</li>
+                                <li>Análise de Sentimento</li>
+                                <li>Suporte Dedicado</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Tabela Comparativa -->
+                    <div class="pricing-comparison-table">
+                    <h3 class="comparison-title">Detalhes Completos</h3>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Recurso</th>
+                                    <th>Automatizador IA</th>
+                                    <th class="popular-column">
+                                        Vendedor IA
+                                        <span class="table-badge">POPULAR</span>
+                                    </th>
+                                    <th>Enterprise</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Mensagens/mês</td>
+                                    <td>5.000</td>
+                                    <td class="popular-column">20.000</td>
+                                    <td>Ilimitado</td>
+                                </tr>
+                                <tr>
+                                    <td>IA Conversacional</td>
+                                    <td><span class="check">✅</span></td>
+                                    <td class="popular-column"><span class="check">✅</span></td>
+                                    <td><span class="check">✅</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Agendamentos Automáticos</td>
+                                    <td><span class="check">✅</span></td>
+                                    <td class="popular-column"><span class="check">✅</span></td>
+                                    <td><span class="check">✅</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Funil de Vendas</td>
+                                    <td><span class="cross">❌</span></td>
+                                    <td class="popular-column"><span class="check">✅</span></td>
+                                    <td><span class="check">✅</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Dashboard Analytics</td>
+                                    <td><span class="cross">❌</span></td>
+                                    <td class="popular-column"><span class="check">✅</span></td>
+                                    <td><span class="check">✅</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Análise de Sentimento</td>
+                                    <td><span class="cross">❌</span></td>
+                                    <td class="popular-column"><span class="cross">❌</span></td>
+                                    <td><span class="check">✅</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Integração Multi-Canal</td>
+                                    <td><span class="cross">❌</span></td>
+                                    <td class="popular-column"><span class="cross">❌</span></td>
+                                    <td><span class="check">✅</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Suporte</td>
+                                    <td>Chat</td>
+                                    <td class="popular-column">Prioritário</td>
+                                    <td>Dedicado</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <!-- Nota Final -->
+                    <div class="table-footer-note">
+                        <p>Lembre-se: O EnvolveAI é 100% ajustado e moldado para as necessidades específicas do seu negócio.</p>
+                    </div>
+                    </div>
+                    
+                    <!-- CTAs Diretos -->
+                    
+                    <!-- CTAs Diretos -->
+                    <div class="pricing-cta-section">
+                        <button class="btn-pricing-cta btn-plan-1" data-plan="1">
+                            <span class="cta-icon">🚀</span>
+                            <div class="cta-content">
+                                <span class="cta-title">Começar com Automatizador IA</span>
+                                <span class="cta-price">R$147/mês</span>
+                            </div>
+                        </button>
+                        
+                        <button class="btn-pricing-cta btn-plan-2 popular-cta" data-plan="2">
+                            <span class="popular-badge-cta">RECOMENDADO</span>
+                            <span class="cta-icon">⚡</span>
+                            <div class="cta-content">
+                                <span class="cta-title">Começar com Vendedor IA</span>
+                                <span class="cta-price">R$497/mês</span>
+                            </div>
+                        </button>
+                        
+                        <button class="btn-pricing-cta btn-plan-3" data-plan="3">
+                            <span class="cta-icon">🏆</span>
+                            <div class="cta-content">
+                                <span class="cta-title">Falar sobre Enterprise</span>
+                                <span class="cta-price">Personalizado</span>
+                            </div>
+                        </button>
+                        
+                        <div class="pricing-guarantee">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>🛡️ Garantia de 7 dias | Cancele quando quiser | Dados exportáveis</span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="section faq-section" id="faq" data-section="5" role="region" aria-labelledby="faq-title" itemscope itemtype="https://schema.org/FAQPage">
+            <div class="section-content">
+                <div class="faq-header">
+                    <h2 class="section-title">Pontos de Clareza</h2>
+                    <p class="section-description">
+                        Respostas diretas para você decidir com segurança
+                    </p>
+                    
+                    <!-- Trust Badges -->
+                    <div class="trust-badges">
+                        <div class="trust-badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>ISO 27001</span>
+                        </div>
+                        <div class="trust-badge">
+                            <i class="fas fa-lock"></i>
+                            <span>LGPD Compliant</span>
+                        </div>
+                        <div class="trust-badge">
+                            <i class="fas fa-check-circle"></i>
+                            <span>99.9% Uptime</span>
+                        </div>
+                        <div class="trust-badge">
+                            <i class="fas fa-headset"></i>
+                            <span>Suporte 24/7</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-container">
+                    <!-- FAQ 1 -->
+                    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <div class="faq-question" itemprop="name">
+                            Como funciona a integração com o WhatsApp?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                            <div class="faq-answer-content" itemprop="text">
+                                Configuração simples e guiada. Em até 15 minutos seu bot estará ativo e testado. 🔧 Sem necessidade de conhecimento técnico.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ 2 -->
+                    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <div class="faq-question" itemprop="name">
+                            Posso cancelar quando quiser?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                            <div class="faq-answer-content" itemprop="text">
+                                Sim. Sem fidelidade, sem multas e com dados exportáveis. ✅ Transparência total.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ 3 -->
+                    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <div class="faq-question" itemprop="name">
+                            Quanto custa realmente por mês?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                            <div class="faq-answer-content" itemprop="text">
+                                Apenas o valor do plano escolhido. A API do WhatsApp é gratuita para pequenos volumes. 💰 Sem taxas ocultas.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ 4 -->
+                    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <div class="faq-question" itemprop="name">
+                            A IA é segura?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                            <div class="faq-answer-content" itemprop="text">
+                                Sim. Criptografia AES-256, servidores com certificação ISO 27001 e conformidade LGPD. 🔒 Segurança enterprise.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ 5 -->
+                    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <div class="faq-question" itemprop="name">
+                            A IA pode errar e prejudicar meu negócio?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                            <div class="faq-answer-content" itemprop="text">
+                                Não. Sistema com fallback automático para atendimento humano em situações críticas. ⚙️ Você mantém controle total.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ 6 -->
+                    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <div class="faq-question" itemprop="name">
+                            Preciso de ajuda para configurar?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                            <div class="faq-answer-content" itemprop="text">
+                                Você conta com suporte humano 24/7 via chat + IA assistente. 🤝 Nunca estará sozinho.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CTA Final -->
+                <div class="faq-cta">
+                    <h4 class="cta-question">Ainda tem dúvidas específicas?</h4>
+                    <p class="cta-context">Preferimos conversar diretamente. Nosso time responde em até 5 minutos no WhatsApp.</p>
+                    <button id="faqContactBtn" class="btn-secondary">💬 Falar com Especialista</button>
+                    <a href="#pricing" class="cta-link">← Ver Planos Novamente</a>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Scripts -->
+    <script>
+        // Sistema de Cinema Interativo - Troca de Cenas
+        document.addEventListener('DOMContentLoaded', function() {
+            const controlButtons = document.querySelectorAll('.capability-control-btn');
+            const stageScenes = document.querySelectorAll('.stage-scene');
+            
+            // Função para trocar de cena
+            function switchScene(targetCapability) {
+                // Remove active de todos os botões e cenas
+                controlButtons.forEach(btn => btn.classList.remove('active'));
+                stageScenes.forEach(scene => scene.classList.remove('active'));
+                
+                // Adiciona active no botão clicado
+                const activeButton = document.querySelector(`[data-capability="${targetCapability}"]`);
+                if (activeButton) activeButton.classList.add('active');
+                
+                // Adiciona active na cena correspondente
+                const activeScene = document.querySelector(`[data-scene="${targetCapability}"]`);
+                if (activeScene) activeScene.classList.add('active');
+                
+                // Anima os números dos insights em tempo real
+                if (targetCapability === 'insights-tempo-real') {
+                    animateMetrics();
+                }
+            }
+            
+            // Animação dos números
+            function animateMetrics() {
+                const metricValues = document.querySelectorAll('.metric-value[data-target]');
+                metricValues.forEach(metric => {
+                    const target = parseFloat(metric.getAttribute('data-target'));
+                    const startValue = 0;
+                    const duration = 2000; // 2 segundos
+                    const startTime = performance.now();
+                    
+                    function updateValue(currentTime) {
+                        const elapsed = currentTime - startTime;
+                        const progress = Math.min(elapsed / duration, 1);
+                        
+                        // Easing function (ease-out)
+                        const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+                        const currentValue = startValue + (target - startValue) * easeOutQuart;
+                        
+                        metric.textContent = currentValue.toFixed(1);
+                        
+                        if (progress < 1) {
+                            requestAnimationFrame(updateValue);
+                        } else {
+                            metric.textContent = target.toString();
+                        }
+                    }
+                    
+                    requestAnimationFrame(updateValue);
+                });
+            }
+            
+            // Event listeners para os botões
+            controlButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const capability = this.getAttribute('data-capability');
+                    switchScene(capability);
+                });
+            });
+            
+            // Inicia com a primeira cena ativa (IA Conversacional)
+            switchScene('ia-conversacional');
+        });
+    </script>
+    
+    <script src="assets/js/fix-overlay.js?v=4"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="assets/js/script.js?v=20251022F"></script>
+    <script src="assets/js/cards-interaction.js?v=8"></script>
+</body>
+</html>

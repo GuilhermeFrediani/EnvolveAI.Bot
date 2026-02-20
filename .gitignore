@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Build outputs
+*.min.js
+*.min.css
+*.map
+
+# Backups
+backup_*/
+*.backup.*
+
+# Environment
+.env
+.env.local
+.vercel
+.netlify
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
